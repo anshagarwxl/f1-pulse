@@ -14,62 +14,49 @@ HTML5
 CSS3
 (No JavaScript or libraries used yet)
 
+## 📁 Project Structure
 
-✅ Current Features
+```
+f1-pulse/
+├── index.html
+├── css/
+│   └── styles.css
+├── assets/
+│   ├── logos/      # Team logos
+│   └── cars/       # Car images
+└── README.md
+```
 
-Single-page layout showcasing all 10 Formula 1 teams
 
-Each team presented in a card layout with:
+## ✅ Current Features
 
-Logo (left)
+- Single-page layout showcasing **all 10 Formula 1 teams**  
+- Each team presented in a card layout with:
+  - **Logo** (left)
+  - **Team info** (center)
+  - **Car image** (right)
+- **Minimalist design**, with clean alignment and typography  
+- Fully **responsive** on desktop and mobile  
+- Organized folder structure for easy scalability  
+## 🚧 Future Implementations
 
-Team info (center)
-
-Car image (right)
-
-Minimalist design, with clean alignment and typography
-
-Fully responsive on desktop and mobile
-
-Organized folder structure for easy scalability
-
-🚧 Future Implementations
-
-Here are the planned upgrades for upcoming phases:
-
-📰 Blog Section
-
-Weekly F1 insights, news summaries, and editorial content
-
-📊 Race Statistics Dashboard
-
-Constructor standings
-
-Driver leaderboards
-
-Fastest laps and qualifying results
-
-🎬 F1 Highlights Tab
-
-Embedded race highlights
-
-Recaps and crash moments
-
-🎨 Dark/Light Theme Toggle
-
-🔍 Search and Filter Teams
-
-Search by constructor name
-
-Filter by engine supplier or year founded
-
-🧑‍💻 Team Details Modal
-
-On-click popups with more data like team principals, drivers, etc.
-
-🌐 Multi-page Navigation
-
-Splitting content into tabs like “Teams”, “Stats”, “News”, “About”
+- 📰 **Blog Section**  
+  - Weekly F1 insights, news summaries, and editorial content
+- 📊 **Race Statistics Dashboard**  
+  - Constructor standings  
+  - Driver leaderboards  
+  - Fastest laps and qualifying results  
+- 🎬 **F1 Highlights Tab**  
+  - Embedded race highlights  
+  - Recaps and crash moments  
+- 🎨 **Dark/Light Theme Toggle**
+- 🔍 **Search and Filter Teams**  
+  - Search by constructor name  
+  - Filter by engine supplier or year founded  
+- 🧑‍💻 **Team Details Modal**  
+  - On-click popups with more data like team principals, drivers, etc.
+- 🌐 **Multi-page Navigation**  
+  - Splitting content into tabs like “Teams”, “Stats”, “News”, “About”
 
 🚀 How to Use
 Clone the repository:
