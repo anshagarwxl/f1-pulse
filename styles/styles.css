@@ -1,0 +1,511 @@
+/* RESET & BASE */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* LIGHTS ANIMATION */
+.f1-start-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 1rem;
+}
+
+.light-row {
+  display: flex;
+  gap: 8px;
+}
+
+.light {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+/* RED BOTTOM LIGHTS */
+.light.red {
+  background-color: #300000;
+  opacity: 0.2;
+  animation: f1RedLights 6s infinite;
+  animation-delay: calc(var(--delay) * 0.5s);
+}
+
+/* GREEN TOP LIGHTS */
+.light.green {
+  background-color: #003000;
+  opacity: 0.2;
+  animation: f1GreenLights 6s infinite;
+  animation-delay: 2.5s;
+}
+
+/* RED LIGHTS KEYFRAMES */
+@keyframes f1RedLights {
+  0%, 19% {
+    background-color: #300000;
+    opacity: 0.2;
+  }
+  20%, 40% {
+    background-color: red;
+    opacity: 1;
+    box-shadow: 0 0 10px red, 0 0 15px red;
+  }
+  41%, 100% {
+    background-color: #300000;
+    opacity: 0.2;
+    box-shadow: none;
+  }
+}
+
+/* GREEN LIGHTS KEYFRAMES */
+@keyframes f1GreenLights {
+  0%, 65% {
+    background-color: #003000;
+    opacity: 0.2;
+  }
+  66%, 100% {
+    background-color: limegreen;
+    opacity: 1;
+    box-shadow: 0 0 10px limegreen, 0 0 15px limegreen;
+  }
+}
+
+/* TEXT GLOW ANIMATION */
+@keyframes f1StartGlow {
+  0% {
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red;
+  }
+  33% {
+    color: orange;
+    text-shadow: 0 0 10px orange, 0 0 20px orange;
+  }
+  66% {
+    color: limegreen;
+    text-shadow: 0 0 10px limegreen, 0 0 20px limegreen;
+  }
+  100% {
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red;
+  }
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a.active {
+  color: #ff4d4d;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ff4d4d;
+  left: 0;
+  bottom: 0;
+}
+
+/* HERO SECTION (UPDATED with image background) */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: none;
+  position: relative;
+  z-index: 1;
+}
+
+.site-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #f4f533;
+  text-shadow: 0 0 10px #f4f533, 0 0 25px #f4f533;
+  margin: 0;
+}
+
+
+.site-subtitle {
+  font-size: 1.3rem;
+  color: #ddd;
+  margin-top: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, red, orange);
+  color: white;
+  border: none;
+}
+
+.btn-outline {
+  background: #1c1c1c;
+  border: 1px solid #444;
+  color: white;
+}
+
+/* WHAT IS F1 SECTION */
+.what-is-f1 {
+  background: url("../images/f1-track.jpg") center center / cover no-repeat;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.overlay.split {
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid lime;
+  box-shadow: 0 0 15px #39ff14;
+  flex-wrap: wrap;
+}
+
+.f1-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f1-image img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  filter: brightness(1.2);
+}
+
+.info {
+  flex: 2;
+  text-align: center;
+}
+
+.section-title {
+  color: red;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  animation: f1StartGlow 2.5s infinite alternate ease-in-out;
+}
+
+.info p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  font-family: 'Orbitron', sans-serif;
+  color: #e0e0e0;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+}
+
+/* SPONSORS */
+.sponsors {
+  background-color: #111;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.sponsors img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.8;
+  filter: blur(1px) brightness(1.2);
+}
+
+/* GALLERY */
+.gallery {
+  text-align: center;
+  padding: 2rem;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: red;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, orange, red);
+  box-shadow: 0 0 10px orange;
+}
+
+.btn-outline:hover {
+  border-color: red;
+  color: red;
+  box-shadow: 0 0 8px red;
+}
+
+/* F1 WORLD MAP SECTION */
+.f1-map {
+  position: relative;
+  background: url('../images/world-map-dark.png') center center/contain no-repeat;
+  height: 450px;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #39ff14;
+  box-shadow: 0 0 20px #39ff14;
+}
+
+.map-overlay h2 {
+  font-size: 2rem;
+  color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.map-overlay p {
+  color: #e0e0e0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+
+.map-section {
+  background: url('../images/world-map-dark.png') center center / cover no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.map-wrapper {
+  background: url('../images/world-map-dark.png') center center / cover no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+  padding-top: 80px; /* Adjust as needed */
+}
+
+.map-wrapper {
+  padding-top: 80px; /* adjust value as needed */
+}
+.title span {
+  background: linear-gradient(90deg, red, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+
+/* TEAMS PAGE STYLING */
+.teams-container {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.team-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background-color: #111;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #444;
+}
+
+.team-photo {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.team-text {
+  flex: 1;
+}
+
+.team-text h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #f4f533;
+  margin-bottom: 0.5rem;
+}
+
+.team-text p {
+  color: #ddd;
+  margin: 0.3rem 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.overlay-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.team-left {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #111;
+}
+
+.team-left img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 8px;
+}
+
+.team-right {
+  flex: 2 1 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  color: #fff;
+  max-width: 90%;
+  text-align: left;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.team-overlay h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: #f4f533;
+}
+
+.team-overlay p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
+.split-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  gap: 2rem;
+}
+
+.split-layout .team-text {
+  flex: 1 1 50%;
+  color: #f0f0f0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.split-layout h2 {
+  color: #f4f533;
+  margin-bottom: 1rem;
+}
+
+.split-layout p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.team-car {
+  flex: 1 1 40%;
+  text-align: right;
+}
+
+.team-car img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.team-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
