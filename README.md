@@ -14,18 +14,7 @@ HTML5
 CSS3
 (No JavaScript or libraries used yet)
 
-📁 Project Structure
-bash
-Copy
-Edit
-f1-pulse/
-├── index.html
-├── css/
-│   └── styles.css
-├── assets/
-│   ├── logos/      # Team logos
-│   └── cars/       # Car images
-└── README.md
+
 ✅ Current Features
 
 Single-page layout showcasing all 10 Formula 1 teams
