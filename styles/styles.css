@@ -158,10 +158,10 @@ a {
 
 .site-subtitle {
   font-size: 1.3rem;
-  color: #ddd;
+  color:#ff4d4d;
   margin-top: 1rem;
   font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 6px #ff4d4d;
 }
 
 
@@ -301,7 +301,7 @@ a {
 /* F1 WORLD MAP SECTION */
 .f1-map {
   position: relative;
-  background: url('../images/world-map-dark.png') center center/contain no-repeat;
+  background: url('../images/homebkg.jpg') center center/contain no-repeat;
   height: 450px;
   margin-top: 4rem;
   display: flex;
@@ -332,7 +332,7 @@ a {
 }
 
 .map-section {
-  background: url('../images/world-map-dark.png') center center / cover no-repeat;
+  background: url('../images/homebkg.jpg') center center / cover no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -340,7 +340,7 @@ a {
 }
 
 .map-wrapper {
-  background: url('../images/world-map-dark.png') center center / cover no-repeat;
+  background: url('../images/homebkg.jpg') center center / cover no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
@@ -509,3 +509,284 @@ a {
   width: 120px;
   margin-bottom: 1rem;
 }
+/* DRIVERS SPLIT LAYOUT */
+.drivers-page {
+  padding: 3rem 2rem;
+  background-color: #0a0a0a;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #f4f533;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 8px #f4f533;
+}
+
+.drivers-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.driver-slab {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background-color: #121212;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.driver-photo-section img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f4f533;
+}
+
+.driver-info-section h2 {
+  font-size: 1.6rem;
+  color: #f4f533;
+  margin-bottom: 0.3rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.driver-info-section p {
+  color: #ddd;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+}
+/* === DRIVERS PAGE === */
+
+.drivers-collage {
+  padding: 4rem 2rem;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.driver-block {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  gap: 2rem;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.driver-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.driver-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f4f533;
+  flex-shrink: 0;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.driver-info h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #f4f533;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 4px #f4f53380;
+}
+
+.driver-info .team-name {
+  font-size: 1rem;
+  color: #ff4d4d;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.driver-info .nationality {
+  font-size: 1rem;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.driver-info .nationality .flag {
+  width: 22px;
+  height: 15px;
+  border-radius: 3px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.driver-info .number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  font-family: monospace;
+  background: #111;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #00ffcc50;
+  width: fit-content;
+  margin-top: 0.4rem;
+  letter-spacing: 1px;
+}
+.driver-info .socials {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.driver-info .socials a {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.driver-info .socials a:hover {
+  color: #f4f533;
+  transform: scale(1.2);
+}
+/* === DRIVERS PAGE STYLING === */
+
+.drivers-page {
+  padding: 4rem 2rem;
+  background-color: #0a0a0a;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f4f533;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 8px #f4f533;
+}
+
+.driver-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Individual driver row */
+.driver-row {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #121212;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.driver-row:hover {
+  transform: translateY(-4px);
+  border-color: #f4f533;
+}
+
+/* Left part (photo) */
+.driver-left {
+  flex: 0 0 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.driver-left img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f4f533;
+  transition: transform 0.3s ease;
+}
+
+.driver-left img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px #f4f533;
+}
+
+/* Right part (info + extras) */
+.driver-right {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+  align-items: center;
+}
+
+/* Driver text info */
+.driver-info h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.driver-info p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Flag + Social icons */
+.driver-extras {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.driver-extras .flag {
+  width: 36px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #888;
+}
+
+/* Icons row */
+.social-icons {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(1.2);
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.5);
+}
+

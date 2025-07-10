@@ -1,0 +1,85 @@
+/* GENERAL STYLES */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+  }
+  
+  /* CONTAINER */
+  .standings-page {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  /* PAGE TITLE */
+  .page-title {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    color: #f4f533;
+    text-shadow: 0 0 8px #f4f533;
+  }
+  
+  /* STANDINGS TABLE */
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  }
+  
+  .standings-table thead {
+    background-color: #111;
+  }
+  
+  .standings-table th,
+  .standings-table td {
+    padding: 1rem 1.2rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .standings-table th {
+    color: #f4f533;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .standings-table td {
+    color: #e0e0e0;
+    border-bottom: 1px solid #222;
+  }
+  
+  /* STRIPING ROWS */
+  .standings-table tbody tr:nth-child(even) {
+    background-color: #181818;
+  }
+  
+  /* POSITION CELL */
+  .standings-table td:first-child {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+  }
+  
+  /* TEAM NAME HIGHLIGHT */
+  .standings-table td:nth-child(2) {
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  
+  /* HOVER EFFECT */
+  .standings-table tbody tr:hover {
+    background-color: #262626;
+    transition: background 0.3s ease;
+    box-shadow: inset 0 0 5px #ff4d4d30;
+  }
+  

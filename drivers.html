@@ -1,13 +1,293 @@
-<!-- same head/nav structure -->
-<section class="page-section">
-    <h2>F1 Drivers</h2>
-    <div class="grid">
-      <div class="card">Lewis Hamilton</div>
-      <div class="card">Max Verstappen</div>
-      <div class="card">Charles Leclerc</div>
-      <div class="card">Lando Norris</div>
-      <div class="card">Fernando Alonso</div>
-      <div class="card">Carlos Sainz</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 PULSE | Drivers</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="f1-start-grid">
+      <div class="light-row top-row">
+        <span class="light green"></span>
+        <span class="light green"></span>
+        <span class="light green"></span>
+        <span class="light green"></span>
+        <span class="light green"></span>
+      </div>
+      <div class="light-row bottom-row">
+        <span class="light red" style="--delay: 0;"></span>
+        <span class="light red" style="--delay: 1;"></span>
+        <span class="light red" style="--delay: 2;"></span>
+        <span class="light red" style="--delay: 3;"></span>
+        <span class="light red" style="--delay: 4;"></span>
+      </div>
     </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a class="active" href="drivers.html">Drivers</a></li>
+        <li><a href="tracks.html">Tracks</a></li>
+        <li><a href="driver-standings.html">Driver Standings</a></li>
+        <li><a href="constructor-standings.html">Constructor Standings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="drivers-collage">
+
+    <!-- Example: Driver Block -->
+    <div class="driver-block">
+      <img src="images/franco-colapinto.jpg" alt="Franco Colapinto" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Franco Colapinto</h2>
+        <p class="team-name">Team: Alpine</p>
+        <p class="nationality">
+          <img src="images/flags/argentina.png" alt="Argentina Flag" class="flag"> Argentina
+        </p>
+        <p class="number">#31</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/pierre-gasly.jpg" alt="Pierre Gasly" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Pierre Gasly</h2>
+        <p class="team-name">Team: Alpine</p>
+        <p class="nationality">
+          <img src="images/flags/france.png" alt="France Flag" class="flag"> France
+        </p>
+        <p class="number">#10</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/fernando-alonso.jpg" alt="Fernando Alonso" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Fernando Alonso</h2>
+        <p class="team-name">Team: Aston Martin</p>
+        <p class="nationality">
+          <img src="images/flags/spain.png" alt="Spain Flag" class="flag"> Spain
+        </p>
+        <p class="number">#14</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/lance-stroll.jpg" alt="Lance Stroll" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Lance Stroll</h2>
+        <p class="team-name">Team: Aston Martin</p>
+        <p class="nationality">
+          <img src="images/flags/canada.png" alt="Canada Flag" class="flag"> Canada
+        </p>
+        <p class="number">#18</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/lewis-hamilton.jpg" alt="Lewis Hamilton" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Lewis Hamilton</h2>
+        <p class="team-name">Team: Ferrari</p>
+        <p class="nationality">
+          <img src="images/flags/uk.png" alt="UK Flag" class="flag"> United Kingdom
+        </p>
+        <p class="number">#44</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/charles-leclerc.jpg" alt="Charles Leclerc" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Charles Leclerc</h2>
+        <p class="team-name">Team: Ferrari</p>
+        <p class="nationality">
+          <img src="images/flags/monaco.png" alt="Monaco Flag" class="flag"> Monaco
+        </p>
+        <p class="number">#16</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/oliver-bearman.jpg" alt="Oliver Bearman" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Oliver Bearman</h2>
+        <p class="team-name">Team: Haas</p>
+        <p class="nationality">
+          <img src="images/flags/uk.png" alt="UK Flag" class="flag"> United Kingdom
+        </p>
+        <p class="number">#87</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/esteban-ocon.jpg" alt="Esteban Ocon" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Esteban Ocon</h2>
+        <p class="team-name">Team: Haas</p>
+        <p class="nationality">
+          <img src="images/flags/france.png" alt="France Flag" class="flag"> France
+        </p>
+        <p class="number">#31</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/lando-norris.jpg" alt="Lando Norris" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Lando Norris</h2>
+        <p class="team-name">Team: McLaren</p>
+        <p class="nationality">
+          <img src="images/flags/uk.png" alt="UK Flag" class="flag"> United Kingdom
+        </p>
+        <p class="number">#4</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/oscar-piastri.jpg" alt="Oscar Piastri" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Oscar Piastri</h2>
+        <p class="team-name">Team: McLaren</p>
+        <p class="nationality">
+          <img src="images/flags/australia.png" alt="Australia Flag" class="flag"> Australia
+        </p>
+        <p class="number">#81</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/kimi-antonelli.jpg" alt="Kimi Antonelli" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Kimi Antonelli</h2>
+        <p class="team-name">Team: Mercedes</p>
+        <p class="nationality">
+          <img src="images/flags/italy.png" alt="Italy Flag" class="flag"> Italy
+        </p>
+        <p class="number">#20</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/george-russell.jpg" alt="George Russell" class="driver-photo" />
+      <div class="driver-info">
+        <h2>George Russell</h2>
+        <p class="team-name">Team: Mercedes</p>
+        <p class="nationality">
+          <img src="images/flags/uk.png" alt="UK Flag" class="flag"> United Kingdom
+        </p>
+        <p class="number">#63</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/isack-hadjar.jpg" alt="Isack Hadjar" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Isack Hadjar</h2>
+        <p class="team-name">Team: Racing Bulls</p>
+        <p class="nationality">
+          <img src="images/flags/france.png" alt="France Flag" class="flag"> France
+        </p>
+        <p class="number">#21</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/liam-lawson.jpg" alt="Liam Lawson" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Liam Lawson</h2>
+        <p class="team-name">Team: Racing Bulls</p>
+        <p class="nationality">
+          <img src="images/flags/nz.png" alt="New Zealand Flag" class="flag"> New Zealand
+        </p>
+        <p class="number">#40</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/yuki-tsunoda.jpg" alt="Yuki Tsunoda" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Yuki Tsunoda</h2>
+        <p class="team-name">Team: Red Bull</p>
+        <p class="nationality">
+          <img src="images/flags/japan.png" alt="Japan Flag" class="flag"> Japan
+        </p>
+        <p class="number">#22</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/max-verstappen.jpg" alt="Max Verstappen" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Max Verstappen</h2>
+        <p class="team-name">Team: Red Bull</p>
+        <p class="nationality">
+          <img src="images/flags/netherlands.png" alt="Netherlands Flag" class="flag"> Netherlands
+        </p>
+        <p class="number">#1</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/gabriel-bortoleto.jpg" alt="Gabriel Bortoleto" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Gabriel Bortoleto</h2>
+        <p class="team-name">Team: Sauber</p>
+        <p class="nationality">
+          <img src="images/flags/brazil.png" alt="Brazil Flag" class="flag"> Brazil
+        </p>
+        <p class="number">#63</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/nico-hulkenberg.jpg" alt="Nico Hulkenberg" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Nico Hülkenberg</h2>
+        <p class="team-name">Team: Sauber</p>
+        <p class="nationality">
+          <img src="images/flags/germany.png" alt="Germany Flag" class="flag"> Germany
+        </p>
+        <p class="number">#27</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/alex-albon.jpg" alt="Alex Albon" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Alex Albon</h2>
+        <p class="team-name">Team: Williams</p>
+        <p class="nationality">
+          <img src="images/flags/thailand.png" alt="Thailand Flag" class="flag"> Thailand
+        </p>
+        <p class="number">#23</p>
+      </div>
+    </div>
+  
+    <div class="driver-block">
+      <img src="images/carlos-sainz.jpg" alt="Carlos Sainz" class="driver-photo" />
+      <div class="driver-info">
+        <h2>Carlos Sainz</h2>
+        <p class="team-name">Team: Williams</p>
+        <p class="nationality">
+          <img src="images/flags/spain.png" alt="Spain Flag" class="flag"> Spain
+        </p>
+        <p class="number">#55</p>
+      </div>
+    </div>
+  
   </section>
   
+  
+
+</body>
+</html>
