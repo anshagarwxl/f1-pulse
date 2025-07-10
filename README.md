@@ -71,6 +71,17 @@ That’s it — no complex setup or dependencies required!
 
 
 ## 📸 Screenshots
+<img width="1470" height="806" alt="image" src="https://github.com/user-attachments/assets/3440b6b2-36cc-4da3-a866-694c1d116b9a" />
+<img width="1464" height="804" alt="image" src="https://github.com/user-attachments/assets/800caeec-108a-440e-872c-c7701d9cf834" />
+<img width="1465" height="790" alt="image" src="https://github.com/user-attachments/assets/50a93785-2a4d-4032-95a4-cd9660462618" />
+<img width="1463" height="806" alt="image" src="https://github.com/user-attachments/assets/9cb04bb8-598d-447f-b12b-df30ea01b5f7" />
+<img width="1466" height="803" alt="image" src="https://github.com/user-attachments/assets/789dd24d-0068-4f9c-92c1-c771f43ece0c" />
+<img width="1470" height="800" alt="image" src="https://github.com/user-attachments/assets/b3d82ad2-3610-4d9a-b712-07e381dbaa6f" />
+<img width="1468" height="813" alt="image" src="https://github.com/user-attachments/assets/04637af5-3684-4909-8bd0-4f7576e66296" />
+
+
+
+
 
 
 
