@@ -4,29 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>F1 Hub</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/navbar.css" /> <link rel="stylesheet" href="styles/styles.css" /> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- NEW CLEAN NAVBAR -->
-  <header>
-    <nav class="site-nav">
-      <div class="container nav-container">
-        <h1 class="site-title">F1 PULSE</h1>
-        <ul class="nav-links">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="drivers.html">Drivers</a></li>
-          <li><a href="teams.html">Teams</a></li>
-          <li><a href="driver-standings.html">Driver Standings</a></li>
-          <li><a href="constructor-standings.html">Constructor Standings</a></li>
-        </ul>
+  <header class="navbar">
+      <div class="f1-start-grid">
+        <div class="light-row top-row">
+          <span class="light green"></span><span class="light green"></span><span class="light green"></span><span class="light green"></span><span class="light green"></span>
+        </div>
+        <div class="light-row bottom-row">
+          <span class="light red"></span><span class="light red"></span><span class="light red"></span><span class="light red"></span><span class="light red"></span>
+        </div>
       </div>
-    </nav>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="active" href="index.html">Home</a></li> <li><a href="driver-standings.html">Driver Standings</a></li>
+          <li><a href="constructor-standings.html">Constructor Standings</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="drivers.html">Drivers</a></li>
+          </ul>
+      </nav>
   </header>
 
-  <!-- MAP BACKGROUND SECTION -->
   <div class="map-wrapper">
     <section class="hero">
         <h1 class="site-title">F1 PULSE</h1>
@@ -37,7 +39,6 @@
         </div>
       </section>
 
-    <!-- WHAT IS F1 -->
     <section class="what-is-f1">
       <div class="overlay split">
         <div class="f1-image">
@@ -57,7 +58,6 @@
     </section>
   </div>
 
-  <!-- SPONSORS -->
   <section class="sponsors">
     <img src="images/lv-logo.png" alt="LV Sponsor" />
     <img src="images/lv-logo.png" alt="LV Sponsor" />
@@ -67,7 +67,6 @@
     <img src="images/lv-logo.png" alt="LV Sponsor" />
   </section>
 
-  <!-- GALLERY SECTION -->
   <section class="gallery">
     <h2>F1 Gallery</h2>
     <div class="gallery-grid">
@@ -82,6 +81,28 @@
       <img src="images/f1-9.jpg" />
     </div>
   </section>
-
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/f1_logo_white.png" alt="F1 Logo" style="height: 40px;">
+        </div>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/Formula1/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/F1" target="_blank" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/f1/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/user/Formula1" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-right">
+            <div class="display-mode">
+                <select>
+                    <option value="auto">Display mode</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <p class="footer-copyright">© 2003-2025 Formula One World Championship Limited</p>
+</footer>
 </body>
 </html>

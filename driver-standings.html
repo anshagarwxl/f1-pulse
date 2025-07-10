@@ -4,25 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>F1 PULSE • Driver Standings</title>
-  <link rel="stylesheet" href="styles/driver-standings.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/navbar.css" /> <link rel="stylesheet" href="styles/styles.css" /> <link rel="stylesheet" href="styles/driver-standings.css" /> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- ✅ CLEAN UNIVERSAL NAVBAR -->
-  <header class="site-nav">
-    <div class="nav-container">
-      <div class="site-title">F1 PULSE</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="driver-standings.html">Driver Standings</a></li>
-          <li><a href="constructor-standings.html">Constructor Standings</a></li>
-          <li><a href="teams.html">Teams</a></li>
-          <li><a href="drivers.html">Drivers</a></li>
-        </ul>
-      </nav>
+  <header class="navbar">
+    <div class="f1-start-grid">
+      <div class="light-row top-row">
+        <span class="light green"></span><span class="light green"></span><span class="light green"></span><span class="light green"></span><span class="light green"></span>
+      </div>
+      <div class="light-row bottom-row">
+        <span class="light red"></span><span class="light red"></span><span class="light red"></span><span class="light red"></span><span class="light red"></span>
+      </div>
     </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="driver-standings.html">Driver Standings</a></li> <li><a href="constructor-standings.html">Constructor Standings</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="drivers.html">Drivers</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="driver-standings">
@@ -38,27 +41,26 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Standings data (unchanged) -->
-        <tr><td>1</td><td><img src="images/oscar-piastri 2.jpg" class="flag"/> Oscar Piastri</td><td>AUS</td><td class="mclaren">McLaren</td><td>234</td></tr>
-        <tr><td>2</td><td><img src="flags/gbr.png" class="flag"/> Lando Norris</td><td>GBR</td><td class="mclaren">McLaren</td><td>226</td></tr>
-        <tr><td>3</td><td><img src="flags/ned.png" class="flag"/> Max Verstappen</td><td>NED</td><td class="redbull">Red Bull</td><td>165</td></tr>
-        <tr><td>4</td><td><img src="flags/gbr.png" class="flag"/> George Russell</td><td>GBR</td><td class="mercedes">Mercedes</td><td>147</td></tr>
-        <tr><td>5</td><td><img src="flags/mon.png" class="flag"/> Charles Leclerc</td><td>MON</td><td class="ferrari">Ferrari</td><td>119</td></tr>
-        <tr><td>6</td><td><img src="flags/gbr.png" class="flag"/> Lewis Hamilton</td><td>GBR</td><td class="ferrari">Ferrari</td><td>103</td></tr>
-        <tr><td>7</td><td><img src="flags/ita.png" class="flag"/> Kimi Antonelli</td><td>ITA</td><td class="mercedes">Mercedes</td><td>63</td></tr>
-        <tr><td>8</td><td><img src="flags/tha.png" class="flag"/> Alexander Albon</td><td>THA</td><td class="williams">Williams</td><td>46</td></tr>
-        <tr><td>9</td><td><img src="flags/ger.png" class="flag"/> Nico Hulkenberg</td><td>GER</td><td class="sauber">Kick Sauber</td><td>37</td></tr>
-        <tr><td>10</td><td><img src="flags/jpn.png" class="flag"/> Yuki Tsunoda</td><td>JPN</td><td class="redbull">Red Bull</td><td>34</td></tr>
-        <tr><td>11</td><td><img src="flags/arg.png" class="flag"/> Franco Colapinto</td><td>ARG</td><td class="alpine">Alpine</td><td>28</td></tr>
-        <tr><td>12</td><td><img src="flags/fra.png" class="flag"/> Esteban Ocon</td><td>FRA</td><td class="haas">Haas</td><td>25</td></tr>
-        <tr><td>13</td><td><img src="flags/nzl.png" class="flag"/> Liam Lawson</td><td>NZL</td><td class="rb">Racing Bulls</td><td>22</td></tr>
-        <tr><td>14</td><td><img src="flags/ita.png" class="flag"/> Oliver Bearman</td><td>ITA</td><td class="haas">Haas</td><td>20</td></tr>
-        <tr><td>15</td><td><img src="flags/fra.png" class="flag"/> Pierre Gasly</td><td>FRA</td><td class="alpine">Alpine</td><td>19</td></tr>
-        <tr><td>16</td><td><img src="flags/bra.png" class="flag"/> Gabriel Bortoleto</td><td>BRA</td><td class="sauber">Kick Sauber</td><td>16</td></tr>
-        <tr><td>17</td><td><img src="flags/fra.png" class="flag"/> Isack Hadjar</td><td>FRA</td><td class="rb">Racing Bulls</td><td>14</td></tr>
-        <tr><td>18</td><td><img src="flags/can.png" class="flag"/> Lance Stroll</td><td>CAN</td><td class="aston">Aston Martin</td><td>12</td></tr>
-        <tr><td>19</td><td><img src="flags/esp.png" class="flag"/> Carlos Sainz</td><td>ESP</td><td class="williams">Williams</td><td>10</td></tr>
-        <tr><td>20</td><td><img src="flags/esp.png" class="flag"/> Fernando Alonso</td><td>ESP</td><td class="aston">Aston Martin</td><td>6</td></tr>
+        <tr><td>1</td><td> Oscar Piastri</td><td>AUS</td><td class="mclaren">McLaren</td><td>234</td></tr>
+        <tr><td>2</td><td> Lando Norris</td><td>GBR</td><td class="mclaren">McLaren</td><td>226</td></tr>
+        <tr><td>3</td><td> Max Verstappen</td><td>NED</td><td class="redbull">Red Bull</td><td>165</td></tr>
+        <tr><td>4</td><td> George Russell</td><td>GBR</td><td class="mercedes">Mercedes</td><td>147</td></tr>
+        <tr><td>5</td><td> Charles Leclerc</td><td>MON</td><td class="ferrari">Ferrari</td><td>119</td></tr>
+        <tr><td>6</td><td> Lewis Hamilton</td><td>GBR</td><td class="ferrari">Ferrari</td><td>103</td></tr>
+        <tr><td>7</td><td> Kimi Antonelli</td><td>ITA</td><td class="mercedes">Mercedes</td><td>63</td></tr>
+        <tr><td>8</td><td> Alexander Albon</td><td>THA</td><td class="williams">Williams</td><td>46</td></tr>
+        <tr><td>9</td><td> Nico Hulkenberg</td><td>GER</td><td class="sauber">Kick Sauber</td><td>37</td></tr>
+        <tr><td>10</td><td> Yuki Tsunoda</td><td>JPN</td><td class="redbull">Red Bull</td><td>34</td></tr>
+        <tr><td>11</td><td> Franco Colapinto</td><td>ARG</td><td class="alpine">Alpine</td><td>28</td></tr>
+        <tr><td>12</td><td> Esteban Ocon</td><td>FRA</td><td class="haas">Haas</td><td>25</td></tr>
+        <tr><td>13</td><td> Liam Lawson</td><td>NZL</td><td class="rb">Racing Bulls</td><td>22</td></tr>
+        <tr><td>14</td><td> Oliver Bearman</td><td>ITA</td><td class="haas">Haas</td><td>20</td></tr>
+        <tr><td>15</td><td> Pierre Gasly</td><td>FRA</td><td class="alpine">Alpine</td><td>19</td></tr>
+        <tr><td>16</td><td> Gabriel Bortoleto</td><td>BRA</td><td class="sauber">Kick Sauber</td><td>16</td></tr>
+        <tr><td>17</td><td> Isack Hadjar</td><td>FRA</td><td class="rb">Racing Bulls</td><td>14</td></tr>
+        <tr><td>18</td><td> Lance Stroll</td><td>CAN</td><td class="aston">Aston Martin</td><td>12</td></tr>
+        <tr><td>19</td><td> Carlos Sainz</td><td>ESP</td><td class="williams">Williams</td><td>10</td></tr>
+        <tr><td>20</td><td> Fernando Alonso</td><td>ESP</td><td class="aston">Aston Martin</td><td>6</td></tr>
       </tbody>
     </table>
   </main>

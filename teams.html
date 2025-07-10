@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>F1 PULSE | Teams</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/navbar.css" /> <link rel="stylesheet" href="styles/styles.css" /> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="f1-start-grid">
       <div class="light-row top-row">
@@ -20,29 +19,26 @@
         <span class="light green"></span>
       </div>
       <div class="light-row bottom-row">
-        <span class="light red" style="--delay: 0;"></span>
-        <span class="light red" style="--delay: 1;"></span>
-        <span class="light red" style="--delay: 2;"></span>
-        <span class="light red" style="--delay: 3;"></span>
-        <span class="light red" style="--delay: 4;"></span>
+        <span class="light red"></span>
+        <span class="light red"></span>
+        <span class="light red"></span>
+        <span class="light red"></span>
+        <span class="light red"></span>
       </div>
     </div>
 
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="teams.html">Teams</a></li>
-        <li><a href="drivers.html">Drivers</a></li>
-        <li><a href="tracks.html">Tracks</a></li>
         <li><a href="driver-standings.html">Driver Standings</a></li>
         <li><a href="constructor-standings.html">Constructor Standings</a></li>
-      </ul>
+        <li><a class="active" href="teams.html">Teams</a></li> <li><a href="drivers.html">Drivers</a></li>
+        </ul>
     </nav>
   </header>
 
   <section class="teams-container">
 
-    <!-- MERCEDES -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/mercedes.jpg" alt="Mercedes Logo" class="team-logo">
@@ -57,7 +53,6 @@
       </div>
     </div>
   
-    <!-- RED BULL -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/redbull.svg" alt="Red Bull Logo" class="team-logo">
@@ -72,7 +67,6 @@
       </div>
     </div>
   
-    <!-- FERRARI -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/ferrari.svg" alt="Ferrari Logo" class="team-logo">
@@ -87,7 +81,6 @@
       </div>
     </div>
   
-    <!-- MCLAREN -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/mclaren.jpg" alt="McLaren Logo" class="team-logo">
@@ -102,7 +95,6 @@
       </div>
     </div>
   
-    <!-- ASTON MARTIN -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/astonmartin.png" alt="Aston Martin Logo" class="team-logo">
@@ -117,7 +109,6 @@
       </div>
     </div>
   
-    <!-- ALPINE -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/alpine.png" alt="Alpine Logo" class="team-logo">
@@ -132,7 +123,6 @@
       </div>
     </div>
   
-    <!-- WILLIAMS -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/williams.jpg" alt="Williams Logo" class="team-logo">
@@ -147,7 +137,6 @@
       </div>
     </div>
   
-    <!-- RACING BULLS -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/rb.jpg" alt="RB Logo" class="team-logo">
@@ -162,7 +151,6 @@
       </div>
     </div>
   
-    <!-- SAUBER (Audi) -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/sauber.jpg" alt="Sauber Logo" class="team-logo">
@@ -177,7 +165,6 @@
       </div>
     </div>
   
-    <!-- HAAS -->
     <div class="team-card split-layout">
       <div class="team-text">
         <img src="images/haas.jpg" alt="Haas Logo" class="team-logo">
@@ -193,7 +180,29 @@
     </div>
   
   </section>
-  
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/f1_logo_white.png" alt="F1 Logo" style="height: 40px;">
+        </div>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/Formula1/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/F1" target="_blank" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/f1/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/user/Formula1" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-right">
+            <div class="display-mode">
+                <select>
+                    <option value="auto">Display mode</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <p class="footer-copyright">© 2003-2025 Formula One World Championship Limited</p>
+</footer>  
 
 </body>
 </html>

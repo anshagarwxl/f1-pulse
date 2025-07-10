@@ -3,8 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #0a0a0a;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   color: #fff;
+  padding-top: 80px; /* Adjust this value if your navbar height changes */
 }
 
 a {
@@ -12,130 +13,33 @@ a {
   color: inherit;
 }
 
-/* NAVBAR */
-.navbar {
-  background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
+/* ANIMATIONS */
 
-/* LIGHTS ANIMATION */
-.f1-start-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding-right: 1rem;
-}
-
-.light-row {
-  display: flex;
-  gap: 8px;
-}
-
-.light {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-
-/* RED BOTTOM LIGHTS */
-.light.red {
-  background-color: #300000;
-  opacity: 0.2;
-  animation: f1RedLights 6s infinite;
-  animation-delay: calc(var(--delay) * 0.5s);
-}
-
-/* GREEN TOP LIGHTS */
-.light.green {
-  background-color: #003000;
-  opacity: 0.2;
-  animation: f1GreenLights 6s infinite;
-  animation-delay: 2.5s;
-}
-
-/* RED LIGHTS KEYFRAMES */
-@keyframes f1RedLights {
-  0%, 19% {
-    background-color: #300000;
-    opacity: 0.2;
-  }
-  20%, 40% {
-    background-color: red;
-    opacity: 1;
-    box-shadow: 0 0 10px red, 0 0 15px red;
-  }
-  41%, 100% {
-    background-color: #300000;
-    opacity: 0.2;
-    box-shadow: none;
-  }
-}
-
-/* GREEN LIGHTS KEYFRAMES */
-@keyframes f1GreenLights {
-  0%, 65% {
-    background-color: #003000;
-    opacity: 0.2;
-  }
-  66%, 100% {
-    background-color: limegreen;
-    opacity: 1;
-    box-shadow: 0 0 10px limegreen, 0 0 15px limegreen;
-  }
-}
-
-/* TEXT GLOW ANIMATION */
-@keyframes f1StartGlow {
+/* F1 PULSE Text Glow Animation */
+@keyframes pulseGlow {
   0% {
-    color: red;
-    text-shadow: 0 0 10px red, 0 0 20px red;
+    text-shadow: 0 0 10px #f4f533, 0 0 25px #f4f533, 0 0 40px rgba(244, 245, 51, 0.5);
   }
-  33% {
-    color: orange;
-    text-shadow: 0 0 10px orange, 0 0 20px orange;
-  }
-  66% {
-    color: limegreen;
-    text-shadow: 0 0 10px limegreen, 0 0 20px limegreen;
+  50% {
+    text-shadow: 0 0 15px #f4f533, 0 0 35px #f4f533, 0 0 60px rgba(244, 245, 51, 0.7);
   }
   100% {
-    color: red;
-    text-shadow: 0 0 10px red, 0 0 20px red;
+    text-shadow: 0 0 10px #f4f533, 0 0 25px #f4f533, 0 0 40px rgba(244, 245, 51, 0.5);
   }
 }
 
-/* NAV LINKS */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+/* Subtitle Color Transition and Fade In */
+@keyframes subtitleEffect {
+    0% { opacity: 0; color: #ff4d4d; transform: translateY(10px); }
+    50% { opacity: 1; color: #ff4d4d; } /* Fades in and stays red */
+    75% { color: yellow; text-shadow: 0 0 8px yellow; } /* Briefly flashes yellow */
+    100% { opacity: 1; color: #ff4d4d; transform: translateY(0); text-shadow: 0 0 6px #ff4d4d; } /* Settles back to red */
 }
 
-.nav-links a {
-  color: white;
-  font-weight: 500;
-  position: relative;
-  padding-bottom: 4px;
-}
 
-.nav-links a.active {
-  color: #ff4d4d;
-}
+/* --- Homepage Specific Styles --- */
 
-.nav-links a.active::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #ff4d4d;
-  left: 0;
-  bottom: 0;
-}
-
-/* HERO SECTION (UPDATED with image background) */
+/* HERO SECTION */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -151,29 +55,30 @@ a {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: #f4f533;
-  text-shadow: 0 0 10px #f4f533, 0 0 25px #f4f533;
+  animation: pulseGlow 3s infinite alternate ease-in-out; /* Apply glow animation */
   margin: 0;
 }
 
-
 .site-subtitle {
   font-size: 1.3rem;
-  color:#ff4d4d;
   margin-top: 1rem;
   font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 6px #ff4d4d;
+  opacity: 0; /* Start hidden for fade-in */
+  animation: subtitleEffect 2.5s forwards 0.5s; /* Apply subtitle effect after a delay */
 }
-
 
 .hero-buttons {
   margin-top: 2rem;
+  display: flex; /* Use flexbox for button layout */
+  justify-content: center;
+  gap: 1rem; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .btn {
   padding: 0.8rem 1.6rem;
   border-radius: 8px;
   font-weight: bold;
-  margin: 0 0.5rem;
   display: inline-block;
   transition: 0.3s ease;
   font-size: 1rem;
@@ -190,6 +95,19 @@ a {
   border: 1px solid #444;
   color: white;
 }
+
+/* Button Hover Effects (from previous version, not directly modified for this request but kept) */
+.btn-primary:hover {
+  background: linear-gradient(90deg, orange, red);
+  box-shadow: 0 0 10px orange;
+}
+
+.btn-outline:hover {
+  border-color: red;
+  color: red;
+  box-shadow: 0 0 8px red;
+}
+
 
 /* WHAT IS F1 SECTION */
 .what-is-f1 {
@@ -287,18 +205,7 @@ a {
   border-radius: 8px;
 }
 
-.btn-primary:hover {
-  background: linear-gradient(90deg, orange, red);
-  box-shadow: 0 0 10px orange;
-}
-
-.btn-outline:hover {
-  border-color: red;
-  color: red;
-  box-shadow: 0 0 8px red;
-}
-
-/* F1 WORLD MAP SECTION */
+/* F1 WORLD MAP SECTION (from previous version, not directly modified now) */
 .f1-map {
   position: relative;
   background: url('../images/homebkg.jpg') center center/contain no-repeat;
@@ -344,12 +251,8 @@ a {
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
-  padding-top: 80px; /* Adjust as needed */
 }
 
-.map-wrapper {
-  padding-top: 80px; /* adjust value as needed */
-}
 .title span {
   background: linear-gradient(90deg, red, orange);
   -webkit-background-clip: text;
@@ -367,7 +270,7 @@ a {
 }
 
 
-/* TEAMS PAGE STYLING */
+/* TEAMS PAGE STYLING (kept from previous version) */
 .teams-container {
   padding: 3rem 2rem;
   display: flex;
@@ -509,62 +412,8 @@ a {
   width: 120px;
   margin-bottom: 1rem;
 }
-/* DRIVERS SPLIT LAYOUT */
-.drivers-page {
-  padding: 3rem 2rem;
-  background-color: #0a0a0a;
-}
 
-.page-title {
-  font-size: 2.5rem;
-  text-align: center;
-  color: #f4f533;
-  font-family: 'Orbitron', sans-serif;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 8px #f4f533;
-}
-
-.drivers-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.driver-slab {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  background-color: #121212;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: 0.3s ease;
-}
-
-.driver-photo-section img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #f4f533;
-}
-
-.driver-info-section h2 {
-  font-size: 1.6rem;
-  color: #f4f533;
-  margin-bottom: 0.3rem;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.driver-info-section p {
-  color: #ddd;
-  font-size: 1rem;
-  font-family: 'Orbitron', sans-serif;
-}
-/* === DRIVERS PAGE === */
-
+/* DRIVERS PAGE STYLING (kept from previous version) */
 .drivers-collage {
   padding: 4rem 2rem;
   background-color: #0a0a0a;
@@ -669,7 +518,7 @@ a {
   color: #f4f533;
   transform: scale(1.2);
 }
-/* === DRIVERS PAGE STYLING === */
+/* === DRIVERS PAGE (Main Driver List) === */
 
 .drivers-page {
   padding: 4rem 2rem;
@@ -773,11 +622,6 @@ a {
 }
 
 /* Icons row */
-.social-icons {
-  display: flex;
-  gap: 0.6rem;
-}
-
 .social-icons img {
   width: 24px;
   height: 24px;
@@ -790,49 +634,205 @@ a {
   filter: brightness(1.5);
 }
 
-/* CLEAN NAVBAR (Used across all pages now) */
-.site-nav {
-  background-color: #0a0a0a;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #333;
-  font-family: 'Orbitron', sans-serif;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 3rem; /* Smaller title on tablets */
+  }
+
+  .site-subtitle {
+    font-size: 1.1rem; /* Smaller subtitle on tablets */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%; /* Make buttons wider when stacked */
+    max-width: 300px;
+  }
+
+  .overlay.split {
+    flex-direction: column; /* Stack image and info in "What is F1" section */
+    text-align: center;
+  }
+
+  .f1-image {
+    margin-bottom: 1.5rem;
+  }
 }
 
-.nav-container {
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 2.5rem; /* Even smaller title on mobile */
+    letter-spacing: 3px;
+  }
+
+  .site-subtitle {
+    font-size: 0.9rem; /* Even smaller subtitle on mobile */
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Single column for gallery on mobile */
+  }
+
+  .sponsors img {
+    height: 60px; /* Smaller sponsor logos on mobile */
+  }
+
+  .team-card.split-layout {
+    flex-direction: column; /* Stack content in team cards */
+    text-align: center;
+  }
+
+  .team-car {
+    text-align: center;
+  }
+
+  .team-logo {
+    width: 100px; /* Smaller team logo on mobile */
+  }
+
+  .driver-block {
+    flex-direction: column; /* Stack driver photo and info */
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .driver-photo {
+    margin-bottom: 0.5rem;
+  }
+
+  .driver-info .nationality {
+    justify-content: center;
+  }
+
+  .driver-info .number {
+    margin: 0.4rem auto 0; /* Center number when stacked */
+  }
+}
+
+/* --- FOOTER STYLES --- */
+.footer {
+  background-color: #121212; /* Dark background as per image */
+  color: #cccccc;
+  padding: 20px 40px;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  margin-top: 50px; /* Provides some space above the footer */
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Red line height */
+  background-color: #E10600; /* F1 Red color */
+}
+
+.footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px;
+  padding-top: 15px; /* Space between red line and content */
 }
 
-.site-title {
-  font-size: 1.5rem;
-  color: #fff;
-  letter-spacing: 1px;
+.footer-logo img {
+  height: 40px; /* Adjust as needed for the F1 logo */
+  filter: brightness(1.2); /* Slightly brightens the logo if it's too dark */
 }
 
-.nav-links {
-  list-style: none;
+.footer-socials {
   display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
+  font-size: 1.5rem;
 }
 
-.nav-links li a {
-  color: #ccc;
-  text-decoration: none;
-  font-weight: 500;
+.footer-socials a {
+  color: #cccccc;
   transition: color 0.3s ease;
-  font-family: 'Orbitron', sans-serif;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: #ffd700; /* Yellow for hover/active */
+.footer-socials a:hover {
+  color: #fff; /* Lighter on hover */
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.display-mode {
+  position: relative;
+}
+
+.display-mode select {
+  background-color: #2a2a2a; /* Darker background for select box */
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px 30px 10px 15px; /* Padding for text and arrow space */
+  border-radius: 20px; /* Rounded corners */
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Orbitron', sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.display-mode select:hover {
+  border-color: #E10600; /* Red border on hover */
+}
+
+/* Custom arrow for select box */
+.display-mode::after {
+  content: '\2304'; /* Unicode for caret down (U+2304) */
+  font-family: 'Font Awesome 5 Free'; /* If using FontAwesome, otherwise a simple unicode char */
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  pointer-events: none; /* Make sure the arrow doesn't block clicks */
+}
+
+
+.footer-copyright {
+  font-size: 0.85rem;
+  text-align: right;
+  margin-top: 20px;
+  width: 100%; /* Ensure it takes full width below other content */
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-right {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .footer-socials {
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .footer-copyright {
+      text-align: center;
+  }
 }

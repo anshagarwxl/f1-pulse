@@ -1,0 +1,113 @@
+/* styles/navbar.css */
+
+/* NAVBAR CONTAINER */
+.navbar {
+    background-color: #000;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-sizing: border-box;
+  }
+  
+  /* F1 START GRID LIGHTS */
+  .f1-start-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .light-row {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .light {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333; /* Default off state */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* RED BOTTOM LIGHTS ANIMATION */
+  .light.red {
+    background-color: #300000; /* Dark red when off */
+    opacity: 0.2;
+    animation: f1RedLights 6s infinite;
+    animation-delay: calc(var(--delay) * 0.5s); /* For staggered animation if --delay is set */
+  }
+  
+  /* GREEN TOP LIGHTS ANIMATION */
+  .light.green {
+    background-color: #003000; /* Dark green when off */
+    opacity: 0.2;
+    animation: f1GreenLights 6s infinite;
+    animation-delay: 2.5s; /* Delay to make green light up later */
+  }
+  
+  /* Keyframes for Red Lights */
+  @keyframes f1RedLights {
+    0%, 19% {
+      background-color: #300000;
+      opacity: 0.2;
+    }
+    20%, 40% { /* Lights up */
+      background-color: red;
+      opacity: 1;
+      box-shadow: 0 0 10px red, 0 0 15px red;
+    }
+    41%, 100% { /* Turns off */
+      background-color: #300000;
+      opacity: 0.2;
+      box-shadow: none;
+    }
+  }
+  
+  /* Keyframes for Green Lights */
+  @keyframes f1GreenLights {
+    0%, 65% {
+      background-color: #003000;
+      opacity: 0.2;
+    }
+    66%, 100% { /* Lights up */
+      background-color: limegreen;
+      opacity: 1;
+      box-shadow: 0 0 10px limegreen, 0 0 15px limegreen;
+    }
+  }
+  
+  /* NAV LINKS */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Consistent gap between links */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+  }
+  
+  /* Active link style */
+  .nav-links .active {
+    color: #ffe100; /* Yellow */
+    border-bottom: 2px solid #ffe100; /* Yellow underline */
+  }
+  
+  /* Hover link style */
+  .nav-links a:hover {
+    color: #f4f533; /* Slightly different yellow for hover */
+  }
