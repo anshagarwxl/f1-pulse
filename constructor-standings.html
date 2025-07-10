@@ -1,9 +1,60 @@
-<section class="page-section">
-    <h2>Constructor Standings</h2>
-    <div class="grid">
-      <div class="card">1. Red Bull - 430 pts</div>
-      <div class="card">2. Mercedes - 320 pts</div>
-      <div class="card">3. Ferrari - 310 pts</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2025 Constructor's Standings</title>
+  <link rel="stylesheet" href="styles/constructor-standings.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="f1-start-grid">
+      <div class="light-row top-row">
+        <span class="light green"></span><span class="light green"></span><span class="light green"></span><span class="light green"></span><span class="light green"></span>
+      </div>
+      <div class="light-row bottom-row">
+        <span class="light red"></span><span class="light red"></span><span class="light red"></span><span class="light red"></span><span class="light red"></span>
+      </div>
     </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="drivers.html">Drivers</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="driver-standings.html">Driver Standings</a></li>
+        <li><a class="active" href="constructor-standings.html">Constructor Standings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="standings">
+    <h1>2025 Constructor's Standings</h1>
+    <table class="standings-table">
+      <thead>
+        <tr>
+          <th>Pos.</th>
+          <th>Team</th>
+          <th>Pts.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td class="team mclaren">McLaren</td><td>460</td></tr>
+        <tr><td>2</td><td class="team ferrari">Ferrari</td><td>222</td></tr>
+        <tr><td>3</td><td class="team mercedes">Mercedes</td><td>210</td></tr>
+        <tr><td>4</td><td class="team redbull">Red Bull Racing</td><td>172</td></tr>
+        <tr><td>5</td><td class="team williams">Williams</td><td>59</td></tr>
+        <tr><td>6</td><td class="team sauber">Kick Sauber</td><td>41</td></tr>
+        <tr><td>7</td><td class="team racingbulls">Racing Bulls</td><td>36</td></tr>
+        <tr><td>8</td><td class="team astonmartin">Aston Martin</td><td>36</td></tr>
+        <tr><td>9</td><td class="team haas">Haas</td><td>29</td></tr>
+        <tr><td>10</td><td class="team alpine">Alpine</td><td>19</td></tr>
+      </tbody>
+    </table>
   </section>
-  
+
+  <footer class="footer">
+    <p>Standings updated through 6 July 2025 (British GP – Round 12)</p>
+  </footer>
+</body>
+</html>

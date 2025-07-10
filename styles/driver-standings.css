@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0e0e11;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 28px;
+}
+
+.driver-standings {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+.standings-table thead {
+  color: #888;
+  font-size: 14px;
+}
+
+.standings-table th, .standings-table td {
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid #2e2e38;
+}
+
+.standings-table tbody tr {
+  background-color: #16161a;
+  transition: background 0.3s;
+}
+
+.standings-table tbody tr:hover {
+  background-color: #1e1e25;
+}
+
+.standings-table img.flag {
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.team-icon {
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #aaa;
+  background: #111;
+}
+
+/* UNIVERSAL CLEAN NAVBAR STYLES */
+.site-nav {
+  background-color: #000;
+  border-bottom: 1px solid #222;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.site-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #f4f533;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px #f4f53380;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.nav-links a.active {
+  color: #ff4d4d;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ff4d4d;
+  left: 0;
+  bottom: 0;
+}
+
+.nav-links a:hover {
+  color: #f4f533;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #ff0;
+  border-bottom: 2px solid #ff0;
+}
+/* Team Colors */
+.mclaren {
+  color: #f27d0c;
+  font-weight: 600;
+}
+.ferrari {
+  color: #ff1e1e;
+  font-weight: 600;
+}
+.mercedes {
+  color: #00d2be;
+  font-weight: 600;
+}
+.redbull {
+  color: #1e41ff;
+  font-weight: 600;
+}
+.williams {
+  color: #64c4ff;
+  font-weight: 600;
+}
+.sauber {
+  color: #52e252;
+  font-weight: 600;
+}
+.alpine {
+  color: #0090ff;
+  font-weight: 600;
+}
+.haas {
+  color: #bdc3c7;
+  font-weight: 600;
+}
+.rb {
+  color: #5c1aff;
+  font-weight: 600;
+}
+.aston {
+  color: #229971;
+  font-weight: 600;
+}

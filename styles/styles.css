@@ -790,3 +790,49 @@ a {
   filter: brightness(1.5);
 }
 
+/* CLEAN NAVBAR (Used across all pages now) */
+.site-nav {
+  background-color: #0a0a0a;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #333;
+  font-family: 'Orbitron', sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ffd700; /* Yellow for hover/active */
+}

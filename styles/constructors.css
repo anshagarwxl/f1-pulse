@@ -1,85 +1,305 @@
-/* GENERAL STYLES */
+/* RESET & BASE */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #0a0a0a;
-    font-family: 'Orbitron', sans-serif;
-    color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f4f533;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f4f533;
+}
+
+.f1-start-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 1rem;
+}
+
+.light-row {
+  display: flex;
+  gap: 8px;
+}
+
+.light {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.light.red {
+  background-color: #300000;
+  opacity: 0.2;
+  animation: f1RedLights 6s infinite;
+  animation-delay: calc(var(--delay) * 0.5s);
+}
+
+.light.green {
+  background-color: #003000;
+  opacity: 0.2;
+  animation: f1GreenLights 6s infinite;
+  animation-delay: 2.5s;
+}
+
+@keyframes f1RedLights {
+  0%, 19% { background-color: #300000; opacity: 0.2; }
+  20%, 40% {
+    background-color: red;
+    opacity: 1;
+    box-shadow: 0 0 10px red, 0 0 15px red;
   }
-  
-  /* CONTAINER */
-  .standings-page {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-    text-align: center;
+  41%, 100% { background-color: #300000; opacity: 0.2; box-shadow: none; }
+}
+
+@keyframes f1GreenLights {
+  0%, 65% { background-color: #003000; opacity: 0.2; }
+  66%, 100% {
+    background-color: limegreen;
+    opacity: 1;
+    box-shadow: 0 0 10px limegreen, 0 0 15px limegreen;
   }
-  
-  /* PAGE TITLE */
-  .page-title {
-    font-size: 2.8rem;
-    margin-bottom: 2.5rem;
-    color: #f4f533;
-    text-shadow: 0 0 8px #f4f533;
+}
+
+/* PODIUM */
+.podium-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 4rem auto 2rem;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+.podium {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.podium img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.podium h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.podium span {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 0.3rem;
+}
+
+.podium-first {
+  transform: translateY(-30px);
+  background: linear-gradient(to bottom, #ff6600, #ff944d);
+  color: white;
+}
+
+.podium-second {
+  transform: translateY(-10px);
+  background: linear-gradient(to bottom, #c40000, #ff4d4d);
+  color: white;
+}
+
+.podium-third {
+  transform: translateY(-5px);
+  background: linear-gradient(to bottom, #1a1a1a, #00e6e6);
+  color: white;
+}
+
+/* CONSTRUCTOR STANDINGS */
+.constructor-container {
+  max-width: 950px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+}
+
+.constructor-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.constructor-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.15);
+}
+
+.position {
+  font-size: 1.3rem;
+  color: #f4f533;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.team-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #f4f533;
+  background-color: #111;
+  padding: 4px;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.team-name span {
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.9;
+  color: #ccc;
+  margin-top: 2px;
+}
+
+.points {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-align: right;
+  width: 80px;
+}
+
+/* TEAM COLORS (MATCHING GENERATED IMAGE) */
+.constructor-row.redbull {
+  background: linear-gradient(to right, #0d1d51, #ffcc00);
+}
+
+.constructor-row.williams {
+  background: linear-gradient(to right, #0b3d91, #66ccff);
+}
+
+.constructor-row.sauber {
+  background: linear-gradient(to right, #1e1e1e, #a9a9a9);
+}
+
+.constructor-row.racingbulls {
+  background: linear-gradient(to right, #4b0082, #ff6600);
+}
+
+.constructor-row.astonmartin {
+  background: linear-gradient(to right, #003f2f, #26a269);
+}
+
+.constructor-row.haas {
+  background: linear-gradient(to right, #1a1a1a, #e60000);
+}
+
+.constructor-row.alpine {
+  background: linear-gradient(to right, #002244, #ff66cc);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  border-top: 1px solid #222;
+}
+
+/* CONFETTI CANVAS */
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .podium-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* STANDINGS TABLE */
-  .standings-table {
+  .podium {
     width: 100%;
-    border-collapse: collapse;
-    background-color: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    max-width: 320px;
   }
-  
-  .standings-table thead {
-    background-color: #111;
+  .constructor-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
-  
-  .standings-table th,
-  .standings-table td {
-    padding: 1rem 1.2rem;
-    text-align: left;
-    font-size: 1rem;
+  .points {
+    align-self: flex-end;
   }
-  
-  .standings-table th {
-    color: #f4f533;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #333;
-  }
-  
-  .standings-table td {
-    color: #e0e0e0;
-    border-bottom: 1px solid #222;
-  }
-  
-  /* STRIPING ROWS */
-  .standings-table tbody tr:nth-child(even) {
-    background-color: #181818;
-  }
-  
-  /* POSITION CELL */
-  .standings-table td:first-child {
-    color: #ff4d4d;
-    font-weight: bold;
-    text-align: center;
-    width: 60px;
-  }
-  
-  /* TEAM NAME HIGHLIGHT */
-  .standings-table td:nth-child(2) {
-    font-weight: 600;
-    font-size: 1.05rem;
-  }
-  
-  /* HOVER EFFECT */
-  .standings-table tbody tr:hover {
-    background-color: #262626;
-    transition: background 0.3s ease;
-    box-shadow: inset 0 0 5px #ff4d4d30;
-  }
-  
+}
